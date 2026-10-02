@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0b3d91" id="theme-color" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Довбыш — 8В" />
+  <meta name="description" content="Предвыборная кампания Петра Довбыша, 8 класс В, химбио. ГБНОУ СО «Академия для одаренных детей (Наяновой)»." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Пётр Довбыш — предвыборная кампания | 8 «В» химбио" />
+  <meta property="og:description" content="Наука, порядок и здоровье — каждый день. Не обещания, а система." />
+  <meta property="og:image" content="logo.jpg" />
+  <meta property="og:locale" content="ru_RU" />
+  <meta name="twitter:card" content="summary" />
+  <title>Пётр Довбыш — предвыборная кампания | 8 «В» химбио</title>
+  <link rel="icon" type="image/jpeg" href="logo.jpg" />
+  <script>
+    (function () {
+      var root = document.documentElement;
+      root.classList.add("js");
+      try {
+        var saved = localStorage.getItem("theme");
+        var theme = saved || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+        root.setAttribute("data-theme", theme);
+        var meta = document.getElementById("theme-color");
+        if (meta) {
+          meta.setAttribute("content", theme === "dark" ? "#0b1220" : "#0b3d91");
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <canvas id="bg-canvas" class="bg-canvas" aria-hidden="true"></canvas>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#top">
+        <img class="brand-logo" src="logo.jpg" alt="Логотип ГБНОУ СО «Академия для одаренных детей (Наяновой)»" width="56" height="56" decoding="async" fetchpriority="high" />
+        <span class="brand-text">
+          <strong>ГБНОУ СО «Академия для одаренных детей (Наяновой)»</strong>
+          <span>Предвыборная кампания · 8 «В» химбио</span>
+        </span>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Основная навигация">
+        <a href="#about">О кандидате</a>
+        <a href="#program">Программа</a>
+        <a href="#ideas">Идеи</a>
+        <a href="#why">Почему я</a>
+        <a class="nav-cta" href="#vote">Голосовать</a>
+      </nav>
+
+      <button class="theme-toggle" type="button" aria-label="Переключить тёмную тему" aria-pressed="false" title="Сменить тему">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+        </svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4" />
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+        </svg>
+      </button>
+
+      <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow">Выборы совета обучающихся · 8 класс «В»</p>
+          <h1 id="hero-title">Пётр <span>Довбыш</span></h1>
+          <p class="hero-role">Химбио-класс · кандидат в совет обучающихся</p>
+          <p class="hero-slogan">«Наука, порядок и здоровье — каждый день. Не обещания, а система».</p>
+          <div class="hero-actions">
+            <a class="btn btn--primary" href="#program">Моя программа</a>
+            <a class="btn btn--ghost" href="#vote">Поддержать</a>
+          </div>
+        </div>
+
+        <div class="hero-photo">
+          <img class="candidate-photo candidate-photo--hero" src="foto.jpg" alt="Пётр Довбыш, кандидат в совет обучающихся" decoding="async" fetchpriority="high" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <p class="section-eyebrow">Кто я</p>
+        <h2 id="about-title" class="section-title">О кандидате</h2>
+
+        <div class="about-grid">
+          <article class="card about-card reveal">
+            <img class="candidate-photo candidate-photo--portrait" src="foto2.jpg" alt="Фотография кандидата Петра Довбыша" loading="lazy" decoding="async" />
+            <ul class="about-facts">
+              <li><span>Класс</span><strong>8 «В», химбио</strong></li>
+              <li><span>Направление</span><strong>Химия и биология</strong></li>
+              <li><span>Увлечения</span><strong>Настольный теннис, микробиология</strong></li>
+              <li><span>Девиз</span><strong>«Проверяю, прежде чем обещать»</strong></li>
+            </ul>
+          </article>
+
+          <div class="about-text reveal">
+            <p>
+              Привет! Я Пётр Довбыш, ученик 8 «В» химбио-класса ГБНОУ СО
+              «Академия для одаренных детей (Наяновой)». Учусь там, где ценят
+              эксперимент, доказательства и
+              аккуратность, — и именно такой подход хочу принести в совет
+              обучающихся.
+            </p>
+            <p>
+              Я не люблю пустые обещания. Моя программа построена на измеримых
+              действиях: проверки, голосования, турниры и постоянная научная
+              жизнь вне уроков. Всё, что я предлагаю, можно увидеть, потрогать и
+              проверить — и я готов отчитываться за результат каждый месяц.
+            </p>
+            <div class="about-tags">
+              <span>Научный подход</span>
+              <span>Открытость</span>
+              <span>Инициативность</span>
+              <span>Ответственность</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tinted" id="program" aria-labelledby="program-title">
+      <div class="container">
+        <p class="section-eyebrow">Что я обещаю сделать</p>
+        <h2 id="program-title" class="section-title">Программа кампании</h2>
+        <p class="section-lead">Четыре конкретных пункта, каждый — с понятным механизмом реализации.</p>
+
+        <div class="program-grid">
+          <article class="card program-card reveal">
+            <span class="program-num" aria-hidden="true">01</span>
+            <h3>Ежемесячная проверка еды из буфета</h3>
+            <p>
+              Каждый месяц проводим школьное голосование о качестве и свежести
+              блюд буфета. По итогам формирую открытый отчёт и передаю
+              предложения администрации и работникам столовой.
+            </p>
+            <span class="program-tag">Голосование учеников · отчёт раз в месяц</span>
+          </article>
+
+          <article class="card program-card reveal">
+            <span class="program-num" aria-hidden="true">02</span>
+            <h3>Микробиологическая проверка помп</h3>
+            <p>
+              Совместно с учителем биологии организую отбор проб с питьевых помп
+              и кулеров. Проверяем состояние воды микробиологически и вывешиваем
+              результаты на стенд — вода должна быть безопасной.
+            </p>
+            <span class="program-tag">Пробы · лабораторный контроль · открытые данные</span>
+          </article>
+
+          <article class="card program-card reveal">
+            <span class="program-num" aria-hidden="true">03</span>
+            <h3>Турнир по настольному теннису</h3>
+            <p>
+              Провожу школьный турнир по настольному теннису с сеткой на классы
+              и финалом. Это спорт, азарт и повод познакомиться ученикам разных
+              параллелей — в перерывах и после уроков.
+            </p>
+            <span class="program-tag">Сетка на классы · финал · призы</span>
+          </article>
+
+          <article class="card program-card reveal">
+            <span class="program-num" aria-hidden="true">04</span>
+            <h3>Популяризация науки во внеурочке</h3>
+            <p>
+              Развиваю научную деятельность вне уроков: мини-эксперименты,
+              научные переменки, встречи с кружками и проектные мастерские. Чтобы
+              наука была интересной и доступной каждому, а не только отличникам.
+            </p>
+            <span class="program-tag">Научные переменки · проекты · мастерские</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="ideas" aria-labelledby="ideas-title">
+      <div class="container">
+        <p class="section-eyebrow">Дополнительно к программе</p>
+        <h2 id="ideas-title" class="section-title">Идеи для благоустройства школы</h2>
+        <p class="section-lead">То, что реально сделать силами учеников — без больших затрат.</p>
+
+        <div class="ideas-grid">
+          <article class="card idea-card reveal">
+            <span class="idea-icon" aria-hidden="true">●</span>
+            <h3>Зона отдыха в рекреации</h3>
+            <p>Уютный уголок с пуфами и столиком, где можно отдохнуть и пообщаться между уроками.</p>
+          </article>
+
+          <article class="card idea-card reveal">
+            <span class="idea-icon" aria-hidden="true">●</span>
+            <h3>QR-навигация по кабинетам</h3>
+            <p>Таблички с QR-кодами и стенд «Расписание недели», чтобы новичкам было проще ориентироваться.</p>
+          </article>
+
+          <article class="card idea-card reveal">
+            <span class="idea-icon" aria-hidden="true">●</span>
+            <h3>Экологический уголок</h3>
+            <p>Раздельный сбор батареек и макулатуры с наглядными памятками и регулярным вывозом.</p>
+          </article>
+
+          <article class="card idea-card reveal">
+            <span class="idea-icon" aria-hidden="true">●</span>
+            <h3>Клуб наставничества</h3>
+            <p>«Старшие — младшим»: помощь с домашним заданием и адаптацией для пятых классов.</p>
+          </article>
+
+          <article class="card idea-card reveal">
+            <span class="idea-icon" aria-hidden="true">●</span>
+            <h3>Озеленение коридоров</h3>
+            <p>«Сад на подоконнике»: растения, за которыми по графику ухаживают классы-шефы.</p>
+          </article>
+
+          <article class="card idea-card reveal">
+            <span class="idea-icon" aria-hidden="true">●</span>
+            <h3>Доска «Идея — школе»</h3>
+            <p>Стенд обратной связи, где любой может оставить предложение. Разбираем идеи раз в месяц.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tinted" id="why" aria-labelledby="why-title">
+      <div class="container">
+        <p class="section-eyebrow">Мой подход</p>
+        <h2 id="why-title" class="section-title">Почему я</h2>
+
+        <div class="why-grid">
+          <article class="card why-card reveal">
+            <h3>Научный подход</h3>
+            <p>Проверяю фактами: пробы, голосования, отчёты. Никаких обещаний «на словах».</p>
+          </article>
+          <article class="card why-card reveal">
+            <h3>Открытость</h3>
+            <p>Все результаты — на школьном стенде и в общем доступе. Вы видите, что сделано.</p>
+          </article>
+          <article class="card why-card reveal">
+            <h3>Инициативность</h3>
+            <p>Готов брать ответственность и доводить дела до конца, а не только предлагать.</p>
+          </article>
+          <article class="card why-card reveal">
+            <h3>Реальные дела</h3>
+            <p>Спорт, наука и комфорт — то, что улучшает каждый школьный день уже сейчас.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section vote" id="vote" aria-labelledby="vote-title">
+      <div class="container vote-inner">
+        <div class="vote-text">
+          <h2 id="vote-title" class="section-title">Голосуй за перемены</h2>
+          <p>
+            Пётр Довбыш, 8 «В» химбио. Наука, спорт и забота о каждом —
+            каждый день, а не только в день выборов.
+          </p>
+          <p class="vote-slogan">«Проверяю, прежде чем обещать».</p>
+        </div>        
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <img class="brand-logo" src="logo.jpg" alt="Логотип ГБНОУ СО «Академия для одаренных детей (Наяновой)»" width="56" height="56" loading="lazy" decoding="async" />
+      <p>
+        Предвыборная кампания Петра Довбыша · 8 «В» химбио ·
+        ГБНОУ СО «Академия для одаренных детей (Наяновой)»
+      </p>      
+    </div>
+  </footer>
+
+  <script src="background.js" defer></script>
+  <script src="script.js"></script>
+</body>
+</html>
